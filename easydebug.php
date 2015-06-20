@@ -7,19 +7,11 @@
  * Author URI: http://github.com/octalmage/
  */
 
-add_action("init", "easydebug_filters");
-
 add_filter("pre_option_template", "easydebug_theme");
 add_filter("pre_option_stylesheet", "easydebug_theme");
 
 add_filter("pre_option_active_plugins", "easydebug_plugins");
 add_filter("pre_site_option_active_sitewide_plugins", "easydebug_plugins");
-
-function easydebug_filters()
-{
-    add_filter("template", "easydebug_theme");
-    add_filter("stylesheet", "easydebug_theme");
-}
 
 function easydebug_theme($theme)
 {
